@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : mer. 19 jan. 2022 à 13:13
+-- Généré le : jeu. 20 jan. 2022 à 15:12
 -- Version du serveur :  5.7.34
 -- Version de PHP : 8.0.8
 
@@ -172,6 +172,51 @@ INSERT INTO `fonction` (`id`, `fon_nom`, `fon_id_responsable_service`, `fon_lect
 (8, 'Expédition', 34, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0),
 (9, 'Laser', 34, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0),
 (10, 'Maintenance', 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `heures_sup`
+--
+
+CREATE TABLE `heures_sup` (
+  `hsup_id` int(11) NOT NULL,
+  `hsup_user_id` int(11) NOT NULL,
+  `hsup_date_declaration` date NOT NULL,
+  `hsup_semaine` int(11) NOT NULL,
+  `hsup_mois` varchar(20) NOT NULL,
+  `hsup_annee` int(11) NOT NULL,
+  `hsup_lundi` int(11) NOT NULL,
+  `hsup_mardi` int(11) NOT NULL,
+  `hsup_mercredi` int(11) NOT NULL,
+  `hsup_jeudi` int(11) NOT NULL,
+  `hsup_vendredi` int(11) NOT NULL,
+  `hsup_samedi` int(11) NOT NULL,
+  `hsup_lundi_autre` varchar(5) NOT NULL,
+  `hsup_mardi_autre` varchar(5) NOT NULL,
+  `hsup_mercredi_autre` varchar(5) NOT NULL,
+  `hsup_jeudi_autre` varchar(5) NOT NULL,
+  `hsup_vendredi_autre` varchar(5) NOT NULL,
+  `hsup_samedi_autre` varchar(5) NOT NULL,
+  `hsup_total_hebdo` varchar(5) NOT NULL,
+  `hsup_solde` varchar(40) NOT NULL,
+  `hsup_observation` text NOT NULL,
+  `hsup_statut` varchar(30) NOT NULL,
+  `hsup_date_validation` date DEFAULT NULL,
+  `hsup_id_superieur` int(11) DEFAULT NULL,
+  `hsup_traitee` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `heures_sup`
+--
+
+INSERT INTO `heures_sup` (`hsup_id`, `hsup_user_id`, `hsup_date_declaration`, `hsup_semaine`, `hsup_mois`, `hsup_annee`, `hsup_lundi`, `hsup_mardi`, `hsup_mercredi`, `hsup_jeudi`, `hsup_vendredi`, `hsup_samedi`, `hsup_lundi_autre`, `hsup_mardi_autre`, `hsup_mercredi_autre`, `hsup_jeudi_autre`, `hsup_vendredi_autre`, `hsup_samedi_autre`, `hsup_total_hebdo`, `hsup_solde`, `hsup_observation`, `hsup_statut`, `hsup_date_validation`, `hsup_id_superieur`, `hsup_traitee`) VALUES
+(1, 33, '2022-01-20', 2, 'Mars', 2021, 30, 60, 90, 120, 150, 180, '', '', '', '', '', '', '10h30', 'en_compte', 'sans type autre', 'demandée', NULL, NULL, 0),
+(2, 33, '2022-01-20', 3, 'Février', 2021, 30, 60, 0, 120, 150, 0, '00:00', '00:00', '00:00', '00:00', '00:00', '21:01', '27h01', 'en_compte', ' blabla', 'demandée', NULL, NULL, 0),
+(3, 33, '2022-01-20', 1, 'Janvier', 2021, 0, 0, 0, 0, 0, 0, '12:08', '00:00', '00:00', '00:00', '00:00', '00:00', '12h08', 'payer', ' ', 'demandée', NULL, NULL, 0),
+(4, 33, '2022-01-20', 1, 'Janvier', 2021, 0, 0, 0, 0, 0, 0, '12:01', '00:00', '00:00', '00:00', '00:00', '00:00', '12h01', 'payer', ' ', 'demandée', NULL, NULL, 0),
+(5, 33, '2022-01-20', 1, 'Janvier', 2021, 0, 0, 0, 0, 0, 0, '00:00', '00:00', '13:01', '00:00', '00:00', '00:00', '13h01', 'payer', ' ', 'demandée', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -506,6 +551,12 @@ ALTER TABLE `fonction`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Index pour la table `heures_sup`
+--
+ALTER TABLE `heures_sup`
+  ADD PRIMARY KEY (`hsup_id`);
+
+--
 -- Index pour la table `logiciels`
 --
 ALTER TABLE `logiciels`
@@ -564,6 +615,12 @@ ALTER TABLE `conges`
 --
 ALTER TABLE `fonction`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT pour la table `heures_sup`
+--
+ALTER TABLE `heures_sup`
+  MODIFY `hsup_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `logiciels`
