@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : jeu. 20 jan. 2022 à 15:12
+-- Généré le : mer. 26 jan. 2022 à 09:46
 -- Version du serveur :  5.7.34
 -- Version de PHP : 8.0.8
 
@@ -97,7 +97,23 @@ INSERT INTO `conges` (`conges_id`, `conges_user`, `conges_type`, `conges_compte`
 (13, 39, 'absence', 'Mes droits normaux', '', '', 0, '2022-01-25', '2022-01-27', 2, '', '', 0, '', '', '', ' ', '2022-01-19', 'accordée', '2022-01-19', 33, 0),
 (14, 33, 'conges', 'Mes droits normaux', '2022-01-26', '2022-01-28', 3, '', '', 0, '', '', 0, '', '', '', ' ', '2022-01-19', 'refusée', '2022-01-19', 33, 0),
 (15, 33, 'conges', 'Mes droits normaux', '', '', 0, '2022-01-07', '', 1, '', '', 0, '', '', '', ' ', '2022-01-19', 'accordée', '2022-01-19', 33, 0),
-(16, 39, 'absence', 'Mes droits normaux', '', '', 0, '2022-01-04', '', 0, '', '', 0, '', '', '', ' ', '2022-01-19', 'accordée', '2022-01-19', 33, 0);
+(16, 39, 'absence', 'Mes droits normaux', '', '', 0, '2022-01-04', '', 0, '', '', 0, '', '', '', ' ', '2022-01-19', 'accordée', '2022-01-19', 33, 0),
+(17, 33, 'conges', 'Mes droits normaux', '', '', 0, '2022-02-04', '', 1, '', '', 0, '', '', '', ' ', '2022-01-24', 'accordée', '2022-01-24', 33, 0),
+(18, 33, 'conges', 'Mes droits normaux', '', '', 0, '2022-02-02', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'refusée', '2022-01-24', 33, 0),
+(19, 33, 'conges', 'Mes droits normaux', '', '', 0, '', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(20, 33, 'conges', 'Mes droits normaux', '', '', 0, '', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(21, 33, 'conges', 'Mes droits normaux', '', '', 0, '', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(22, 33, 'conges', 'Mes droits normaux', '', '', 0, '', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(23, 33, 'conges', 'Mes droits normaux', '', '', 0, '', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(24, 33, 'conges', 'Mes droits normaux', '', '', 0, '', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(29, 39, 'conges', 'Mes droits normaux', '', '', 0, '2022-01-25', '', 1, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(30, 39, 'conges', 'Mes droits normaux', '', '', 0, '2022-02-06', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(31, 39, 'conges', 'Mes droits normaux', '', '', 0, '2022-02-06', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(32, 39, 'conges', 'Mes droits normaux', '', '', 0, '2022-02-06', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(33, 39, 'conges', 'Mes droits normaux', '', '', 0, '2022-02-06', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(34, 39, 'conges', 'Mes droits normaux', '', '', 0, '2022-02-06', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(35, 39, 'conges', 'Mes droits normaux', '', '', 0, '2022-02-06', '', 0, '', '', 0, '', '', '', ' ', '2022-01-24', 'demandée', NULL, NULL, 0),
+(36, 33, 'conges', 'Mes droits normaux', '2022-01-18', '2022-01-19', 2, '2022-02-04', '', 1, '', '', 0, '', '', '', ' ', '2022-01-25', 'demandée', NULL, NULL, 0);
 
 -- --------------------------------------------------------
 
@@ -212,11 +228,13 @@ CREATE TABLE `heures_sup` (
 --
 
 INSERT INTO `heures_sup` (`hsup_id`, `hsup_user_id`, `hsup_date_declaration`, `hsup_semaine`, `hsup_mois`, `hsup_annee`, `hsup_lundi`, `hsup_mardi`, `hsup_mercredi`, `hsup_jeudi`, `hsup_vendredi`, `hsup_samedi`, `hsup_lundi_autre`, `hsup_mardi_autre`, `hsup_mercredi_autre`, `hsup_jeudi_autre`, `hsup_vendredi_autre`, `hsup_samedi_autre`, `hsup_total_hebdo`, `hsup_solde`, `hsup_observation`, `hsup_statut`, `hsup_date_validation`, `hsup_id_superieur`, `hsup_traitee`) VALUES
-(1, 33, '2022-01-20', 2, 'Mars', 2021, 30, 60, 90, 120, 150, 180, '', '', '', '', '', '', '10h30', 'en_compte', 'sans type autre', 'demandée', NULL, NULL, 0),
-(2, 33, '2022-01-20', 3, 'Février', 2021, 30, 60, 0, 120, 150, 0, '00:00', '00:00', '00:00', '00:00', '00:00', '21:01', '27h01', 'en_compte', ' blabla', 'demandée', NULL, NULL, 0),
-(3, 33, '2022-01-20', 1, 'Janvier', 2021, 0, 0, 0, 0, 0, 0, '12:08', '00:00', '00:00', '00:00', '00:00', '00:00', '12h08', 'payer', ' ', 'demandée', NULL, NULL, 0),
-(4, 33, '2022-01-20', 1, 'Janvier', 2021, 0, 0, 0, 0, 0, 0, '12:01', '00:00', '00:00', '00:00', '00:00', '00:00', '12h01', 'payer', ' ', 'demandée', NULL, NULL, 0),
-(5, 33, '2022-01-20', 1, 'Janvier', 2021, 0, 0, 0, 0, 0, 0, '00:00', '00:00', '13:01', '00:00', '00:00', '00:00', '13h01', 'payer', ' ', 'demandée', NULL, NULL, 0);
+(1, 33, '2022-01-20', 2, 'Mars', 2021, 30, 60, 90, 120, 150, 180, '', '', '', '', '', '', '10h30', 'en compte', 'sans type autre', 'validées', '2022-01-24', 33, 0),
+(2, 33, '2022-01-20', 3, 'Février', 2021, 30, 60, 0, 120, 150, 0, '00:00', '00:00', '00:00', '00:00', '00:00', '21:01', '27h01', 'en compte', ' blabla', 'validées', '2022-01-24', 33, 0),
+(3, 33, '2022-01-20', 1, 'Janvier', 2021, 0, 0, 0, 0, 0, 0, '12:08', '00:00', '00:00', '00:00', '00:00', '00:00', '12h08', 'payer', ' ', 'déclarées', NULL, NULL, 0),
+(4, 33, '2022-01-20', 1, 'Janvier', 2021, 0, 0, 0, 0, 0, 0, '12:01', '00:00', '00:00', '00:00', '00:00', '00:00', '12h01', 'payer', ' ', 'déclarées', NULL, NULL, 0),
+(5, 33, '2022-01-20', 1, 'Janvier', 2021, 0, 0, 0, 0, 0, 0, '00:00', '00:00', '13:01', '00:00', '00:00', '00:00', '13h01', 'payer', ' ', 'déclarées', NULL, NULL, 0),
+(6, 33, '2022-01-24', 4, 'Janvier', 2021, 30, 0, 0, 30, 0, 0, '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '1h00', 'en compte', ' ', 'refusées', '2022-01-24', 33, 0),
+(7, 39, '2022-01-24', 3, 'Janvier', 2021, 0, 120, 0, 0, 0, 0, '00:00', '00:00', '00:00', '00:00', '00:00', '00:00', '2h00', 'en compte', ' ', 'validées', '2022-01-24', 33, 0);
 
 -- --------------------------------------------------------
 
@@ -283,6 +301,99 @@ INSERT INTO `logiciels` (`logiciels_id`, `logiciels_id_process`, `logiciels_illu
 (18, 2, 1, 0, 0, 1, 1, 1),
 (19, 25, 0, 0, 1, 1, 1, 0),
 (20, 26, 0, 0, 1, 1, 1, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `polyvalence`
+--
+
+CREATE TABLE `polyvalence` (
+  `poly_id` int(11) NOT NULL,
+  `poly_user_id` int(11) NOT NULL,
+  `poly_date_declaration` date NOT NULL,
+  `poly_poste_1` int(11) NOT NULL,
+  `poly_date_1` varchar(11) NOT NULL,
+  `poly_debut_1` varchar(5) NOT NULL,
+  `poly_fin_1` varchar(5) NOT NULL,
+  `poly_poste_2` int(11) NOT NULL,
+  `poly_date_2` varchar(11) NOT NULL,
+  `poly_debut_2` varchar(5) NOT NULL,
+  `poly_fin_2` varchar(5) NOT NULL,
+  `poly_poste_3` int(11) NOT NULL,
+  `poly_date_3` varchar(11) NOT NULL,
+  `poly_debut_3` varchar(5) NOT NULL,
+  `poly_fin_3` varchar(5) NOT NULL,
+  `poly_poste_4` int(11) NOT NULL,
+  `poly_date_4` varchar(11) NOT NULL,
+  `poly_debut_4` varchar(5) NOT NULL,
+  `poly_fin_4` varchar(5) NOT NULL,
+  `poly_poste_5` int(11) NOT NULL,
+  `poly_date_5` varchar(11) NOT NULL,
+  `poly_debut_5` varchar(5) NOT NULL,
+  `poly_fin_5` varchar(5) NOT NULL,
+  `poly_poste_6` int(11) NOT NULL,
+  `poly_date_6` varchar(11) NOT NULL,
+  `poly_debut_6` varchar(5) NOT NULL,
+  `poly_fin_6` varchar(5) NOT NULL,
+  `poly_poste_7` int(11) NOT NULL,
+  `poly_date_7` varchar(11) NOT NULL,
+  `poly_debut_7` varchar(5) NOT NULL,
+  `poly_fin_7` varchar(5) NOT NULL,
+  `poly_poste_8` int(11) NOT NULL,
+  `poly_date_8` varchar(11) NOT NULL,
+  `poly_debut_8` varchar(5) NOT NULL,
+  `poly_fin_8` varchar(5) NOT NULL,
+  `poly_poste_9` int(11) NOT NULL,
+  `poly_date_9` varchar(11) NOT NULL,
+  `poly_debut_9` varchar(5) NOT NULL,
+  `poly_fin_9` varchar(5) NOT NULL,
+  `poly_poste_10` int(11) NOT NULL,
+  `poly_date_10` varchar(11) NOT NULL,
+  `poly_debut_10` varchar(5) NOT NULL,
+  `poly_fin_10` varchar(5) NOT NULL,
+  `poly_temps_total` varchar(5) NOT NULL,
+  `poly_statut` varchar(40) NOT NULL,
+  `poly_date_validation` date DEFAULT NULL,
+  `poly_id_superieur` int(11) DEFAULT NULL,
+  `poly_traitee` tinyint(1) NOT NULL DEFAULT '0'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `polyvalence`
+--
+
+INSERT INTO `polyvalence` (`poly_id`, `poly_user_id`, `poly_date_declaration`, `poly_poste_1`, `poly_date_1`, `poly_debut_1`, `poly_fin_1`, `poly_poste_2`, `poly_date_2`, `poly_debut_2`, `poly_fin_2`, `poly_poste_3`, `poly_date_3`, `poly_debut_3`, `poly_fin_3`, `poly_poste_4`, `poly_date_4`, `poly_debut_4`, `poly_fin_4`, `poly_poste_5`, `poly_date_5`, `poly_debut_5`, `poly_fin_5`, `poly_poste_6`, `poly_date_6`, `poly_debut_6`, `poly_fin_6`, `poly_poste_7`, `poly_date_7`, `poly_debut_7`, `poly_fin_7`, `poly_poste_8`, `poly_date_8`, `poly_debut_8`, `poly_fin_8`, `poly_poste_9`, `poly_date_9`, `poly_debut_9`, `poly_fin_9`, `poly_poste_10`, `poly_date_10`, `poly_debut_10`, `poly_fin_10`, `poly_temps_total`, `poly_statut`, `poly_date_validation`, `poly_id_superieur`, `poly_traitee`) VALUES
+(1, 33, '2022-01-25', 2, '2022-01-18', '12:05', '12:30', 1, '2022-01-18', '14:00', '14:30', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', '0h55', 'validées', '2022-01-25', 33, 0),
+(2, 33, '2022-01-25', 1, '2022-01-19', '15:00', '16:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', 0, '', '00:00', '00:00', '1h00', 'refusées', '2022-01-25', 33, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `poste_polyvalence`
+--
+
+CREATE TABLE `poste_polyvalence` (
+  `poste_id` int(11) NOT NULL,
+  `poste_label` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `poste_polyvalence`
+--
+
+INSERT INTO `poste_polyvalence` (`poste_id`, `poste_label`) VALUES
+(1, 'Photopolymère'),
+(2, 'Montage plat'),
+(3, 'Fibre de verre'),
+(4, 'Dégarnissage caoutchouc'),
+(5, 'Garnissage caoutchouc'),
+(6, 'Rectification'),
+(7, 'Laser'),
+(8, 'Expédition'),
+(9, 'Livraison'),
+(10, 'Entretien'),
+(11, 'Autre');
 
 -- --------------------------------------------------------
 
@@ -380,7 +491,7 @@ INSERT INTO `techspecs` (`techspec_id`, `techspec_nom`, `techspec_client`, `acti
 CREATE TABLE `tracker` (
   `id` int(11) NOT NULL,
   `user_id` int(11) NOT NULL,
-  `connect_time` datetime NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `connect_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `action` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -389,108 +500,9 @@ CREATE TABLE `tracker` (
 --
 
 INSERT INTO `tracker` (`id`, `user_id`, `connect_time`, `action`) VALUES
-(7770, 2, '2022-01-05 12:30:00', 'Connexion à l\'application'),
-(7771, 2, '2022-01-05 12:30:01', 'Chargement de la page d\'accueil PAO'),
-(7772, 2, '2022-01-05 12:30:03', 'Chargement de la page d\'accueil PAO'),
-(7773, 2, '2022-01-05 12:30:04', 'Chargement de la page d\'accueil PAO'),
-(7774, 2, '2022-01-05 12:30:11', 'Chargement de la page d\'accueil PAO'),
-(7775, 2, '2022-01-05 12:30:17', 'Déconnexion de l\'application'),
-(7776, 2, '2022-01-05 12:30:43', 'Connexion à l\'application'),
-(7777, 2, '2022-01-05 12:30:45', 'Chargement de la page d\'accueil PAO'),
-(7778, 2, '2022-01-05 12:30:50', 'Chargement de la page d\'accueil PAO'),
-(7779, 2, '2022-01-05 12:30:52', 'Chargement de la page d\'accueil PAO'),
-(7780, 2, '2022-01-05 12:30:53', 'Chargement de la page d\'accueil PAO'),
-(7781, 2, '2022-01-05 12:30:53', 'Chargement de la page d\'accueil PAO'),
-(7782, 2, '2022-01-05 12:30:53', 'Chargement de la page d\'accueil PAO'),
-(7783, 2, '2022-01-05 12:30:53', 'Chargement de la page d\'accueil PAO'),
-(7784, 2, '2022-01-05 12:30:54', 'Chargement de la page d\'accueil PAO'),
-(7785, 2, '2022-01-05 12:30:54', 'Chargement de la page d\'accueil PAO'),
-(7786, 2, '2022-01-05 12:30:54', 'Chargement de la page d\'accueil PAO'),
-(7787, 2, '2022-01-05 12:30:58', 'Déconnexion de l\'application'),
-(7788, 2, '2022-01-05 12:32:06', 'Connexion à l\'application'),
-(7789, 2, '2022-01-05 12:32:07', 'Chargement de la page d\'accueil PAO'),
-(7790, 2, '2022-01-05 12:32:15', 'Déconnexion de l\'application'),
-(7791, 34, '2022-01-14 07:50:21', 'Chargement de la page d\'accueil PAO'),
-(7792, 34, '2022-01-14 07:50:24', 'Chargement de la page d\'accueil PAO'),
-(7793, 34, '2022-01-14 07:50:25', 'Chargement de la page d\'accueil PAO'),
-(7794, 34, '2022-01-14 08:02:12', 'Chargement de la page d\'accueil PAO'),
-(7795, 34, '2022-01-14 08:02:13', 'Chargement de la page d\'accueil PAO'),
-(7796, 34, '2022-01-14 08:02:14', 'Chargement de la page d\'accueil PAO'),
-(7797, 34, '2022-01-14 08:02:28', 'Chargement de la page d\'accueil PAO'),
-(7798, 34, '2022-01-14 08:02:30', 'Chargement de la page d\'accueil PAO'),
-(7799, 34, '2022-01-14 08:02:36', 'Chargement de la page d\'accueil PAO'),
-(7800, 34, '2022-01-14 08:02:36', 'Chargement de la page d\'accueil PAO'),
-(7801, 34, '2022-01-14 08:02:37', 'Chargement de la page d\'accueil PAO'),
-(7802, 34, '2022-01-14 08:02:37', 'Chargement de la page d\'accueil PAO'),
-(7803, 34, '2022-01-14 08:02:37', 'Chargement de la page d\'accueil PAO'),
-(7804, 34, '2022-01-14 08:02:37', 'Chargement de la page d\'accueil PAO'),
-(7805, 34, '2022-01-14 08:02:37', 'Chargement de la page d\'accueil PAO'),
-(7806, 34, '2022-01-14 08:04:56', 'Chargement de la page d\'accueil PAO'),
-(7807, 34, '2022-01-14 08:04:57', 'Chargement de la page d\'accueil PAO'),
-(7808, 34, '2022-01-14 08:04:57', 'Chargement de la page d\'accueil PAO'),
-(7809, 34, '2022-01-14 08:05:25', 'Chargement de la page d\'accueil PAO'),
-(7810, 34, '2022-01-14 08:06:12', 'Chargement de la page d\'accueil PAO'),
-(7811, 34, '2022-01-14 08:06:24', 'Chargement de la page d\'accueil PAO'),
-(7812, 34, '2022-01-14 08:06:41', 'Chargement de la page d\'accueil PAO'),
-(7813, 34, '2022-01-14 08:06:54', 'Chargement de la page d\'accueil PAO'),
-(7814, 34, '2022-01-14 08:07:26', 'Chargement de la page d\'accueil PAO'),
-(7815, 34, '2022-01-14 08:07:27', 'Chargement de la page d\'accueil PAO'),
-(7816, 34, '2022-01-14 08:07:27', 'Chargement de la page d\'accueil PAO'),
-(7817, 34, '2022-01-14 08:07:27', 'Chargement de la page d\'accueil PAO'),
-(7818, 34, '2022-01-14 08:07:27', 'Chargement de la page d\'accueil PAO'),
-(7819, 34, '2022-01-14 08:07:28', 'Chargement de la page d\'accueil PAO'),
-(7820, 34, '2022-01-14 08:07:28', 'Chargement de la page d\'accueil PAO'),
-(7821, 34, '2022-01-14 08:07:59', 'Chargement de la page d\'accueil PAO'),
-(7822, 34, '2022-01-14 08:08:35', 'Chargement de la page d\'accueil PAO'),
-(7823, 34, '2022-01-14 08:08:51', 'Chargement de la page d\'accueil PAO'),
-(7824, 34, '2022-01-14 08:09:02', 'Chargement de la page d\'accueil PAO'),
-(7825, 34, '2022-01-14 08:10:32', 'Chargement de la page d\'accueil PAO'),
-(7826, 34, '2022-01-14 08:12:48', 'Chargement de la page d\'accueil PAO'),
-(7827, 34, '2022-01-14 08:13:01', 'Chargement de la page d\'accueil PAO'),
-(7828, 34, '2022-01-14 08:13:08', 'Chargement de la page d\'accueil PAO'),
-(7829, 34, '2022-01-14 08:17:50', 'Chargement de la page d\'accueil PAO'),
-(7830, 34, '2022-01-14 08:17:51', 'Chargement de la page d\'accueil PAO'),
-(7831, 34, '2022-01-14 08:17:51', 'Chargement de la page d\'accueil PAO'),
-(7832, 34, '2022-01-14 08:17:52', 'Chargement de la page d\'accueil PAO'),
-(7833, 34, '2022-01-14 08:17:52', 'Chargement de la page d\'accueil PAO'),
-(7834, 34, '2022-01-14 08:17:52', 'Chargement de la page d\'accueil PAO'),
-(7835, 34, '2022-01-14 08:17:53', 'Chargement de la page d\'accueil PAO'),
-(7836, 34, '2022-01-14 08:17:54', 'Chargement de la page d\'accueil PAO'),
-(7837, 34, '2022-01-14 08:17:54', 'Chargement de la page d\'accueil PAO'),
-(7838, 34, '2022-01-14 08:17:54', 'Chargement de la page d\'accueil PAO'),
-(7839, 34, '2022-01-14 08:17:54', 'Chargement de la page d\'accueil PAO'),
-(7840, 34, '2022-01-14 08:19:49', 'Chargement de la page d\'accueil PAO'),
-(7841, 34, '2022-01-14 08:20:02', 'Chargement de la page d\'accueil PAO'),
-(7842, 34, '2022-01-14 08:20:03', 'Chargement de la page d\'accueil PAO'),
-(7843, 34, '2022-01-14 08:20:03', 'Chargement de la page d\'accueil PAO'),
-(7844, 34, '2022-01-14 08:20:03', 'Chargement de la page d\'accueil PAO'),
-(7845, 34, '2022-01-14 08:20:15', 'Chargement de la page d\'accueil PAO'),
-(7846, 34, '2022-01-14 08:20:36', 'Chargement de la page d\'accueil PAO'),
-(7847, 34, '2022-01-14 08:21:06', 'Chargement de la page d\'accueil PAO'),
-(7848, 34, '2022-01-14 08:21:07', 'Chargement de la page d\'accueil PAO'),
-(7849, 34, '2022-01-14 08:21:07', 'Chargement de la page d\'accueil PAO'),
-(7850, 34, '2022-01-14 08:21:07', 'Chargement de la page d\'accueil PAO'),
-(7851, 34, '2022-01-14 08:21:27', 'Chargement de la page d\'accueil PAO'),
-(7852, 34, '2022-01-14 08:22:12', 'Chargement de la page d\'accueil PAO'),
-(7853, 34, '2022-01-14 08:22:17', 'Chargement de la page d\'accueil PAO'),
-(7854, 34, '2022-01-14 08:22:40', 'Chargement de la page d\'accueil PAO'),
-(7855, 34, '2022-01-14 08:22:42', 'Chargement de la page d\'accueil PAO'),
-(7856, 34, '2022-01-14 08:22:43', 'Chargement de la page d\'accueil PAO'),
-(7857, 34, '2022-01-14 08:24:01', 'Chargement de la page d\'accueil PAO'),
-(7858, 34, '2022-01-14 08:24:02', 'Chargement de la page d\'accueil PAO'),
-(7859, 34, '2022-01-14 08:24:02', 'Chargement de la page d\'accueil PAO'),
-(7860, 34, '2022-01-14 08:24:02', 'Chargement de la page d\'accueil PAO'),
-(7861, 34, '2022-01-14 08:24:02', 'Chargement de la page d\'accueil PAO'),
-(7862, 34, '2022-01-14 08:24:15', 'Chargement de la page d\'accueil PAO'),
-(7863, 34, '2022-01-14 08:24:16', 'Chargement de la page d\'accueil PAO'),
-(7864, 34, '2022-01-14 08:24:16', 'Chargement de la page d\'accueil PAO'),
-(7865, 34, '2022-01-14 08:24:16', 'Chargement de la page d\'accueil PAO'),
-(7866, 34, '2022-01-14 08:25:05', 'Chargement de la page d\'accueil PAO'),
-(7867, 34, '2022-01-14 08:25:05', 'Chargement de la page d\'accueil PAO'),
-(7868, 34, '2022-01-14 08:25:05', 'Chargement de la page d\'accueil PAO'),
-(7869, 34, '2022-01-14 08:25:08', 'Chargement de la page d\'accueil PAO'),
-(7870, 34, '2022-01-14 08:25:09', 'Chargement de la page d\'accueil PAO'),
-(7871, 34, '2022-01-14 08:26:06', 'Chargement de la page d\'accueil PAO');
+(7896, 39, '2022-01-26 09:46:11', 'Chargement de la page de suivie de déclaration d\'heures sup.'),
+(7897, 39, '2022-01-26 09:46:13', 'Chargement de la page de demande de congés'),
+(7898, 39, '2022-01-26 09:46:14', 'Chargement de la page d\'accueil PAO');
 
 -- --------------------------------------------------------
 
@@ -563,6 +575,18 @@ ALTER TABLE `logiciels`
   ADD PRIMARY KEY (`logiciels_id`);
 
 --
+-- Index pour la table `polyvalence`
+--
+ALTER TABLE `polyvalence`
+  ADD PRIMARY KEY (`poly_id`);
+
+--
+-- Index pour la table `poste_polyvalence`
+--
+ALTER TABLE `poste_polyvalence`
+  ADD PRIMARY KEY (`poste_id`);
+
+--
 -- Index pour la table `process`
 --
 ALTER TABLE `process`
@@ -608,7 +632,7 @@ ALTER TABLE `clients`
 -- AUTO_INCREMENT pour la table `conges`
 --
 ALTER TABLE `conges`
-  MODIFY `conges_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `conges_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
 -- AUTO_INCREMENT pour la table `fonction`
@@ -620,13 +644,25 @@ ALTER TABLE `fonction`
 -- AUTO_INCREMENT pour la table `heures_sup`
 --
 ALTER TABLE `heures_sup`
-  MODIFY `hsup_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `hsup_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT pour la table `logiciels`
 --
 ALTER TABLE `logiciels`
   MODIFY `logiciels_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
+
+--
+-- AUTO_INCREMENT pour la table `polyvalence`
+--
+ALTER TABLE `polyvalence`
+  MODIFY `poly_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT pour la table `poste_polyvalence`
+--
+ALTER TABLE `poste_polyvalence`
+  MODIFY `poste_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT pour la table `process`
@@ -650,7 +686,7 @@ ALTER TABLE `techspecs`
 -- AUTO_INCREMENT pour la table `tracker`
 --
 ALTER TABLE `tracker`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7872;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7899;
 
 --
 -- AUTO_INCREMENT pour la table `users`
