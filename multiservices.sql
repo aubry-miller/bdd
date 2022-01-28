@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : mer. 26 jan. 2022 à 09:46
+-- Généré le : ven. 28 jan. 2022 à 13:29
 -- Version du serveur :  5.7.34
 -- Version de PHP : 8.0.8
 
@@ -153,6 +153,33 @@ INSERT INTO `droits` (`id_user`, `lecture_pao`, `ecriture_pao`, `lecture_gmg`, `
 -- --------------------------------------------------------
 
 --
+-- Structure de la table `ecran_accueil`
+--
+
+CREATE TABLE `ecran_accueil` (
+  `ecacc_id` int(11) NOT NULL,
+  `ecacc_fond_id` int(11) NOT NULL,
+  `ecacc_message` varchar(300) NOT NULL,
+  `ecacc_debut` datetime NOT NULL,
+  `ecacc_fin` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `ecran_accueil`
+--
+
+INSERT INTO `ecran_accueil` (`ecacc_id`, `ecacc_fond_id`, `ecacc_message`, `ecacc_debut`, `ecacc_fin`) VALUES
+(1, 1, '<h2>Bienvenue<br>Monsieur BOUM<br>de la société<br>Badaboum</h2>', '2022-01-25 13:27:38', '2022-01-27 13:27:38'),
+(2, 4, '<p><span style=\"font-family: \'times new roman\', times, serif;\">Texte test</span></p>\r\n<p><span style=\"font-family: georgia, palatino, serif;\"><em>Avec plusieurs trucs</em></span></p>\r\n<p><span style=\"text-decoration: line-through;\">Mais pas &ccedil;a</span></p>', '2022-01-05 00:00:00', '2022-01-06 00:00:00'),
+(3, 3, '<p>test alternance 2</p>\r\n<p>ecrans</p>', '2022-01-05 00:00:00', '2022-01-06 00:00:00'),
+(4, 3, '<h2>ecran</h2>\r\n<h2>3</h2>', '2022-01-05 00:00:00', '2022-01-06 00:00:00'),
+(5, 1, '<p><em>ecran</em></p>\r\n<p><em>4</em></p>', '2022-01-05 00:00:00', '2022-01-06 00:00:00'),
+(6, 4, '<p>Visite</p>\r\n<p>de la soci&eacute;t&eacute;</p>\r\n<p>Blablacar</p>', '2022-02-01 00:00:00', '2022-02-02 00:00:00'),
+(8, 5, '<p><strong>Bonjour</strong></p>\r\n<p>le monde</p>\r\n<p>et les autres</p>\r\n<p>!!!</p>', '2022-02-03 00:00:00', '2022-02-04 00:00:00');
+
+-- --------------------------------------------------------
+
+--
 -- Structure de la table `fonction`
 --
 
@@ -188,6 +215,28 @@ INSERT INTO `fonction` (`id`, `fon_nom`, `fon_id_responsable_service`, `fon_lect
 (8, 'Expédition', 34, 0, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0),
 (9, 'Laser', 34, 0, 0, 0, 0, 1, 1, 0, 0, 0, 0, 0),
 (10, 'Maintenance', 34, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
+-- Structure de la table `fond_ecran_accueil`
+--
+
+CREATE TABLE `fond_ecran_accueil` (
+  `fea_id` int(11) NOT NULL,
+  `fea_adresse_image` varchar(100) NOT NULL,
+  `fea_color_text` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Déchargement des données de la table `fond_ecran_accueil`
+--
+
+INSERT INTO `fond_ecran_accueil` (`fea_id`, `fea_adresse_image`, `fea_color_text`) VALUES
+(1, 'black.png', 'white'),
+(3, 'blue.png', 'white'),
+(4, 'couleurs_geometrique.jpg', '#003366'),
+(5, 'cubes3d.jpg', '#003366');
 
 -- --------------------------------------------------------
 
@@ -291,7 +340,7 @@ INSERT INTO `logiciels` (`logiciels_id`, `logiciels_id_process`, `logiciels_illu
 (4, 9, 1, 1, 1, 1, 1, 1),
 (5, 10, 1, 0, 0, 1, 1, 0),
 (7, 11, 1, 0, 1, 1, 1, 0),
-(8, 12, 0, 0, 0, 1, 1, 1),
+(8, 12, 1, 0, 0, 1, 1, 1),
 (10, 13, 0, 0, 0, 1, 1, 1),
 (11, 14, 0, 0, 0, 1, 1, 1),
 (12, 15, 1, 1, 0, 1, 1, 0),
@@ -502,7 +551,10 @@ CREATE TABLE `tracker` (
 INSERT INTO `tracker` (`id`, `user_id`, `connect_time`, `action`) VALUES
 (7896, 39, '2022-01-26 09:46:11', 'Chargement de la page de suivie de déclaration d\'heures sup.'),
 (7897, 39, '2022-01-26 09:46:13', 'Chargement de la page de demande de congés'),
-(7898, 39, '2022-01-26 09:46:14', 'Chargement de la page d\'accueil PAO');
+(7898, 39, '2022-01-26 09:46:14', 'Chargement de la page d\'accueil PAO'),
+(7899, 39, '2022-01-26 10:16:20', 'Chargement de la page d\'accueil PAO'),
+(7900, 39, '2022-01-26 10:16:21', 'Chargement de la page d\'accueil PAO'),
+(7901, 39, '2022-01-26 10:16:23', 'Chargement de la page d\'accueil PAO');
 
 -- --------------------------------------------------------
 
@@ -557,10 +609,22 @@ ALTER TABLE `droits`
   ADD KEY `user_id_droit` (`id_user`);
 
 --
+-- Index pour la table `ecran_accueil`
+--
+ALTER TABLE `ecran_accueil`
+  ADD PRIMARY KEY (`ecacc_id`);
+
+--
 -- Index pour la table `fonction`
 --
 ALTER TABLE `fonction`
   ADD PRIMARY KEY (`id`);
+
+--
+-- Index pour la table `fond_ecran_accueil`
+--
+ALTER TABLE `fond_ecran_accueil`
+  ADD PRIMARY KEY (`fea_id`);
 
 --
 -- Index pour la table `heures_sup`
@@ -635,10 +699,22 @@ ALTER TABLE `conges`
   MODIFY `conges_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=37;
 
 --
+-- AUTO_INCREMENT pour la table `ecran_accueil`
+--
+ALTER TABLE `ecran_accueil`
+  MODIFY `ecacc_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
 -- AUTO_INCREMENT pour la table `fonction`
 --
 ALTER TABLE `fonction`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT pour la table `fond_ecran_accueil`
+--
+ALTER TABLE `fond_ecran_accueil`
+  MODIFY `fea_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT pour la table `heures_sup`
@@ -686,7 +762,7 @@ ALTER TABLE `techspecs`
 -- AUTO_INCREMENT pour la table `tracker`
 --
 ALTER TABLE `tracker`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7899;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7902;
 
 --
 -- AUTO_INCREMENT pour la table `users`
