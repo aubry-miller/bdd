@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost
--- Généré le : mer. 09 fév. 2022 à 07:38
+-- Généré le : mer. 09 fév. 2022 à 10:14
 -- Version du serveur : 5.5.45
 -- Version de PHP : 8.0.0
 
@@ -170,7 +170,9 @@ INSERT INTO `clients` (`client_id`, `client_nom`, `client_site`, `actif`, `clien
 (34, 'Schur Flexibles Sac', 1, 1, 0),
 (35, 'Société Bretonne d\'Etiquette', 1, 1, 0),
 (36, 'Sicad', 1, 1, 0),
-(37, 'Tilwel', 1, 1, 0);
+(37, 'Tilwel', 1, 1, 0),
+(38, 'Sobredim', 1, 1, 0),
+(39, 'ABC Line', 1, 1, 0);
 
 -- --------------------------------------------------------
 
@@ -412,7 +414,8 @@ INSERT INTO `lien_bibliotheque_client` (`lbc_bibliotheque_id`, `lbc_client_id`) 
 (14, 36),
 (97, 37),
 (61, 37),
-(62, 37);
+(62, 37),
+(96, 38);
 
 -- --------------------------------------------------------
 
@@ -1039,7 +1042,19 @@ INSERT INTO `techspecs` (`techspec_id`, `techspec_nom`, `techspec_client`, `acti
 (434, '- MPS Sur 1.14 NXH MMS2_Support PETM 12/80 PRIME + BLANC IE', 37, 1),
 (435, '- MPS Sur 1.14 NXH_Support KBF IE', 37, 1),
 (436, '- MPS Sur 1.7 DPR', 37, 1),
-(437, '- VALMET Sur CDI Sw', 37, 1);
+(437, '- VALMET Sur CDI Sw', 37, 1),
+(438, '- Epreuve IsoCoated 1 Bit_Sur Transparent WT7900 Sw', 38, 1),
+(439, '- Epreuve IsoCoated 8 Bits_SemiMat Sw', 38, 1),
+(440, '- Epreuve Std-Flexo-Etiq 1 Bit_SemiMat Sw', 38, 1),
+(441, '- Epreuve Std-Flexo-Etiq 1 Bit_Sur Transparent WT7900 Sw', 38, 1),
+(442, '- FRLI_Etiquette_Flexo_Sobredim', 38, 1),
+(443, '- Laser Kodak SOBREDIM Sw', 38, 1),
+(444, 'CLICHÉS MONTÉS - CARTEC / CUIR / JURINE - FSCD 5,5 Sw', 39, 1),
+(445, 'CLICHÉS MONTÉS - KLETT - FSCD 5,5 Sw', 39, 1),
+(446, 'CLICHÉS MONTÉS - TEXO - FSCD 5,5 Sw', 39, 1),
+(447, 'FRBE_KLETT 1636 - FSCD 5,5', 39, 1),
+(448, 'NON-MONTÉS - CARTEC / CUIR / JURINE - FSCD 5,5 Sw', 39, 1),
+(449, 'TEST - CLICHÉS MONTÉS - EMBA - FSCD 4,32 Sw', 39, 1);
 
 -- --------------------------------------------------------
 
@@ -7442,7 +7457,15 @@ INSERT INTO `tracker` (`id`, `user_id`, `connect_time`, `action`) VALUES
 (8111, 42, '2022-02-08 14:48:16', 'Chargement de la page GMG'),
 (8112, 42, '2022-02-08 14:48:22', 'Chargement de la page GMG'),
 (8113, 42, '2022-02-08 14:53:23', 'Chargement de la page GMG'),
-(8114, 42, '2022-02-09 06:37:17', 'Chargement de la page de gestion des bibliothéques');
+(8114, 42, '2022-02-09 06:37:17', 'Chargement de la page de gestion des bibliothéques'),
+(8115, 42, '2022-02-09 06:38:58', 'Chargement de la page d\'accueil PAO'),
+(8116, 42, '2022-02-09 06:39:00', 'Chargement de la page de demande de congés'),
+(8117, 42, '2022-02-09 08:19:17', 'Chargement de la page d\'accueil PAO'),
+(8118, 42, '2022-02-09 08:19:28', 'Chargement de la page GMG'),
+(8119, 42, '2022-02-09 08:19:40', 'Chargement de la page GMG'),
+(8120, 42, '2022-02-09 08:20:28', 'Chargement de la page de demande de congés'),
+(8121, 42, '2022-02-09 08:20:31', 'Chargement de la page de gestion des bibliothéques'),
+(8122, 42, '2022-02-09 09:10:09', 'Chargement de la page de gestion des clients');
 
 -- --------------------------------------------------------
 
@@ -8000,7 +8023,7 @@ ALTER TABLE `bibliotheques_de_teintes`
 -- AUTO_INCREMENT pour la table `clients`
 --
 ALTER TABLE `clients`
-  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=38;
+  MODIFY `client_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
 
 --
 -- AUTO_INCREMENT pour la table `conges`
@@ -8066,7 +8089,7 @@ ALTER TABLE `sites`
 -- AUTO_INCREMENT pour la table `techspecs`
 --
 ALTER TABLE `techspecs`
-  MODIFY `techspec_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=438;
+  MODIFY `techspec_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=450;
 
 --
 -- AUTO_INCREMENT pour la table `teintes`
@@ -8078,7 +8101,7 @@ ALTER TABLE `teintes`
 -- AUTO_INCREMENT pour la table `tracker`
 --
 ALTER TABLE `tracker`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8115;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8123;
 
 --
 -- AUTO_INCREMENT pour la table `trans_bernis`
